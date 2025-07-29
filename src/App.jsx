@@ -1,42 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import TodoNew from './components/todo/TodoNew';
+import TodoData from './components/todo/TodoData';
+import './components/todo/todo.css';
+import reactLogo from './assets/react.svg';
 
-const MyComponent = () => {
+const App = () => {
+  const addNewTodo = (name) => {
+    alert(`Call me: ${name}`);
+  }
   return (
-    <h2>Hello Quang</h2>
+    <div className="todo-container">
+      <div className="todo-title">Hello world</div>
+      <TodoNew
+        addNewTodo={addNewTodo}
+      />
+      <TodoData
+
+      />
+      <div className='todo-img'>
+        <img className='logo' src={reactLogo} />
+      </div>
+    </div>
   );
 }
 
-const App = () => {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <MyComponent />
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
-
-export default App
+export default App;
