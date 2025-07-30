@@ -1,7 +1,18 @@
-const TodoData = () => {
+const TodoData = (props) => {
+  const { todoList } = props;
+  console.log(">>>> check props: ", props)
   return (
     <div className='todo-data'>
-      <div>Learning React</div>
+      {/* <div>Learning React</div> */}
+      {todoList.map((item, index) => {
+        console.log(">>> check map: ", item, index)
+        return (
+          <div className="todo-item">
+            <div>{item.name}</div>
+            <button>Delete</button>
+          </div>
+        );
+      })}
     </div>
   );
 };
