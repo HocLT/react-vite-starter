@@ -6,10 +6,7 @@ import reactLogo from './assets/react.svg';
 
 const App = () => {
 
-  const [todoList, setTodoList] = useState([
-    { id: 1, name: "Demo 1" },
-    { id: 2, name: "Demo 2" }
-  ]);
+  const [todoList, setTodoList] = useState([]);
 
   const addNewTodo = (name) => {
     let id = todoList.length;
