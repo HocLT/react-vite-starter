@@ -28,7 +28,7 @@ const App = () => {
 
   return (
     <>
-      <Header />
+      <Headgit er />
       <div className="todo-container">
         <div className="todo-title">Hello world</div>
         <TodoNew
